@@ -11,12 +11,8 @@ export default class Team {
     // Собственная реализация генератора
     const members = this.toArray();
 
-    let currentMemberIndex = 0;
-
-    while (currentMemberIndex < members.length) {
-      yield members[currentMemberIndex];
-
-      currentMemberIndex += 1;
+    for (let index = 0; index < members.length; index += 1) {
+      yield members[index];
     }
   }
 
